@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+t=np.linspace(0,1,10000)
+M=10
+P_0=15
+r=1
+P=M*P_0/(P_0+(M-P_0)*np.exp(-r*M*(t)))
+plt.plot(t,P,linewidth=1)
+plt.title("logistic curve",fontsize=24)
+plt.tick_params(axis='both',labelsize=14)
+plt.show()
